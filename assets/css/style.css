@@ -5,6 +5,7 @@ body {
 }
 
 .header {
+    display: flex;
     background-color: #ffffff;
     height: 50px;
     border-style:solid;
@@ -13,6 +14,7 @@ body {
 }
 
 .name {
+    text-align: center;
     background-color: #4aaaa5;
     color: white;
     display: inline-block;
@@ -21,15 +23,17 @@ body {
     padding: 15px;
     font-family: 'Georgia', Times, Times New Roman, serif;
     font-weight: bold;
+    width: 300px;
 }
 
 .nav {
-    float: right;
-    margin-right: 10%;
+    text-align: right;
     font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
     font-size: 12px;
     color: #cccccc;
     padding-top: 20px;
+    width: 100%;
+    padding-right: 10%;
 }
 
 a:link {
@@ -63,7 +67,7 @@ a:active {
     float: left;
     padding-right: 20px;
     padding-top: 10px;
-    height: 200px;
+    height: 300px;
     width: auto;
 }
 
@@ -140,19 +144,20 @@ p {
     padding: 5px 0px 5px 0px;
 }
 
-.port_pic {
-    margin: 10px 10px 0px 0px;
+.port_main {
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.pic_container {
-    display: inline-block;
+.port_pic {
+    margin: 10px 10px 0px 0px;
 }
 
 .pic_text {
    position: relative;
    bottom: 30px;
    background-color: #4aaaa5;
-   width: 125px;
+   width: 200px;
    color: white;
    text-align: center;
    font-family: 'Georgia', Times, Times New Roman, serif;
@@ -169,4 +174,56 @@ p {
 
 .main {
     display: flex;
+}
+
+@media (max-width: 980px){
+   
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 640px) {
+
+    .main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .about_pic {
+        position: relative;
+        left: 17%;
+        width: 225px;
+        height: 300px;
+    }
+
+    .header {
+        display: flex;
+        flex-direction: column;
+        height: 100px;
+    }
+
+    .name {
+        text-align: center;
+        margin-left: 0px;
+        width: 100%;
+    }
+
+    .nav {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        background-color: white;
+    }
+
+    .port_pic {
+        width: 350px;
+    }
+
+    .pic_text {
+        width: 350px;
+        height: 25px;
+        padding-top: 10px;
+    }
 }
